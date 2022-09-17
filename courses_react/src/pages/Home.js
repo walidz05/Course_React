@@ -8,6 +8,7 @@ const Home = () => {
             'poster':'/assets/images/screen.png',
             'heading':' we are travel friends',
             'paragraph':"  Come and join us we travel the most famous and beatiful places in the world",
+            'logo':'/assets/images/logo.png',
       });
 
   return (

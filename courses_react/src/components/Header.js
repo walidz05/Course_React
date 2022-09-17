@@ -3,9 +3,17 @@ const Header = ({state,children}) => {
 
   return (
     <div className='header'>
+      
+      <div className="container pr">
+            <div className="header__logo">
+                  <img src={state.logo} alt="" />
+            </div>
+      </div>
+      `
       <div className="header__video">
             <video poster={state.poster} src={state.video} autoPlay loop muted></video>
       </div>
+
       <div className="header__contents">
             <div className="container">
                   <div className="header__contents__text">

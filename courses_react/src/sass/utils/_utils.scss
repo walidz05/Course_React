@@ -1,0 +1,12 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+.container {
+      max-width: 1200px;
+      margin: 0 auto;
+}
+
+.btn-default{
+@include mixins.button(variables.$main1,variables.$main2,variables.$white,3.5rem,18px,.2rem,0,2rem)
+}     
+

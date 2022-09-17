@@ -7,3 +7,26 @@
       width: $width;
       height: $height;
 }
+
+@mixin  align($flex,$justify-content,$align-items,$height){
+      display: $flex;
+      justify-content: $justify-content;
+      align-items: $align-items;
+      height: $height;
+}
+
+@mixin  button($color1,$color2,$textColor,$height,$fontSize,$bdr,$paddingVertical,$paddingHorizontal){
+      background: linear-gradient(to right, $color1, $color2);
+      color: $textColor;
+      text-decoration: none;
+      height: $height;
+      line-height: 3.5rem;
+      display: inline-block;
+      font-size: $fontSize;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      border-radius: $bdr;
+      padding: $paddingVertical $paddingHorizontal;
+      text-transform: uppercase;
+}

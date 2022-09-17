@@ -3,7 +3,7 @@ const Header = ({state,children}) => {
 
   return (
     <div className='header'>
-      
+
       <div className="container pr">
             <div className="header__logo">
                   <img src={state.logo} alt="" />
@@ -31,6 +31,7 @@ const Header = ({state,children}) => {
                   </div>
             </div>
       </div>
+      
 </div>
   )
 }

@@ -1,9 +1,11 @@
 import React,{useContext} from 'react';
 import ModelContext from '../context/ModelContext';
 
-const Modal = () => {
+const Modal = (props) => {
 
   const {state,dispatch} = useContext(ModelContext); 
+
+    const { login, setLogin } = useContext(ModelContext); 
 
   const closeModel = () => {
     dispatch({modelStatus:false});
@@ -17,16 +19,16 @@ const Modal = () => {
   }
 
   return state.modelStatus ? (
-    <div className="modal" onClick={() => dispatch({type:'CLOSE_MODEL'})}>
+    <div className="modal">
       <div className="modal__body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quia
-        aperiam recusandae sapiente, unde asperiores debitis nobis numquam in
-        maxime quam magni, accusantium quod saepe eos neque perspiciatis rerum
-        illo.
+        {props.children}
+        <button type="button" onClick={() => setLogin({ type: "LOGIN" })}>
+          are ayou have un account ?
+        </button>
       </div>
     </div>
   ) : (
-    ''
+    ""
   );
 }
 export default Modal

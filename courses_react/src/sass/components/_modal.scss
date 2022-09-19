@@ -1,0 +1,18 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+
+.modal{
+      @include mixins.position(fixed,0,0,0,0,100%,100%);
+      background:rgba(0, 0, 0, 0.5);
+      @include mixins.align(flex, center, center, 100%);
+      z-index: 1;
+
+      &__body{
+            width:38rem;
+            height:auto;
+            background: variables.$white;
+            padding: 2rem;
+            font-size: 1.4rem;
+      }
+}

@@ -1,0 +1,28 @@
+@use "../abstract/mixins";
+@use "../abstract/variables";
+
+
+.toggle-open{
+      @include mixins.position(fixed,52px,null,null,3rem,null,100%);
+      z-index: 9999;
+      cursor: pointer;
+
+      span {
+            width: 40px;
+            height: 5px;
+            background: variables.$main1;
+            display: block;
+      }
+       span:nth-child(1){
+            margin-bottom: 10px;
+      }
+             span:nth-child(2) {
+                   margin-bottom: 10px;
+             }
+            span:nth-child(3) {
+                  margin-bottom:10px;
+            }
+
+     
+
+}

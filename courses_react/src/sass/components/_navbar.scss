@@ -1,0 +1,59 @@
+@use '../abstract/mixins';
+@use '../abstract/variables';
+
+.navLayer{
+      @include mixins.position(fixed,0,0,0,0,100%,100%);
+      background:rgba($color: #000000, $alpha: 0.5);
+      z-index: 1;
+}
+.nav{
+
+      @include mixins.position(fixed, 0,null, 0, 0, 350px, 100%);
+            background: variables.$white;
+            z-index: 9999;
+            @include mixins.align(flex, center, center, 100%);
+        
+      &__content{     
+            a{
+                  display: block;
+                  padding: 1.5rem 3rem;
+                  color:variables.$black;             
+                  font-size: 1.2rem;
+                  font-weight: 400;
+                  position: relative;
+                  &::before{
+                      
+
+                  }
+            }
+      }
+
+      &--close{
+            transform: translateX(100%);
+      }
+
+      &--open{
+            transform: translateX(0);
+      }
+
+      &__close{
+      @include mixins.position(absolute,52px, null, 10rem, 2rem, null, null);
+      cursor: pointer;
+      span{
+            width: 40px;
+            height: 2px;
+            background: variables.$main1;
+            display: block;
+      }
+      span:nth-child(1)
+      {
+            transform: rotate(45deg);
+      }
+      span:nth-child(2) {
+
+            transform: rotate(-45deg);
+      }
+      
+      }
+
+}

@@ -7,8 +7,7 @@ import Login from '../auth/Login';
 
 const Home = () => {
 
-  const {state:stateModel,login,dispatch} = useContext(ModelContext); 
-  console.log(login);
+  const {state:stateModel,dispatch} = useContext(ModelContext); 
    
      const [state,setState] = useState({
             'video' : '/assets/videos/header.mp4',  
@@ -18,17 +17,28 @@ const Home = () => {
             'logo':'/assets/images/logo.png',
       });
 
+      const [registerModel] = useState('registerModel');
+      const [loginModel] = useState('loginModel');
+
   return (
     <>
-      <Modal>{login === false ? <Login /> : <Register />}</Modal>
       <Header state={state}>
         <button
-          onClick={() => dispatch({ type: "OPEN_MODEL" })}
+          onClick={() =>
+            dispatch({ type: "OPEN_MODEL", payload: registerModel })
+          }
           className="btn-default"
         >
           Get Started
         </button>
       </Header>
+
+      <Modal current={registerModel}>
+        <Register currentModel={loginModel} />
+      </Modal>
+      <Modal current={loginModel}>
+        <Login currentModel={registerModel} />
+      </Modal>
     </>
   );
 }

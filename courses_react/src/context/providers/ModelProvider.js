@@ -6,16 +6,12 @@ const ModelProvider = (props) => {
 
  const [state,dispatch] =  useReducer(ModelReducer,
 
-{modelStatus: false});
+{modelStatus: false,current:''});
 
-const [login,setLogin] = useReducer(
-  ModelReducer,
-  { login: false }
-);
 
   return (
     <>
-      <ModelContext.Provider value={{ state, dispatch, login, setLogin }}>
+      <ModelContext.Provider value={{ state, dispatch}}>
         {props.children}
       </ModelContext.Provider>
     </>

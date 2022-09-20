@@ -8,6 +8,14 @@
       @include mixins.align(flex, center, center, 100%);
       z-index: 1;
 
+      &__heading{
+            h3{
+                  font-size: 2rem;
+                  margin-bottom: 1.5rem;
+                  font-weight: 400;
+            }
+      }
+
       &__body{
             width:38rem;
             height:auto;

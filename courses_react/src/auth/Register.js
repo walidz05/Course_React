@@ -1,17 +1,15 @@
-import React,{useContext} from 'react';
-import ModelContext from '../context/ModelContext';
+import React, { useState, useContext } from "react";
+import ModelContext from "../context/ModelContext";
 
-const Register = () => {
+const Register = (props) => {
 
-
-
+  const {state:stateModel, dispatch } = useContext(ModelContext);
 
   return (
     <form>
-      <div className="model__heading">
+      <div className="modal__heading">
         <h3>Create new account</h3>
       </div>
-
       <div className="group">
         <input
           type="text"
@@ -39,13 +37,19 @@ const Register = () => {
         />
       </div>
 
-      <div className="group">
+      <div className="group flex">
         <input type="submit" name="" className="btn-dark" value="Register" />
+        <span
+          onClick={() =>
+            dispatch({ type: "OPEN_MODEL", payload: props.currentModel })
+          }
+          style={{ cursor: "pointer" }}
+        >
+          are ayou have un account ?
+        </span>
       </div>
-
-    
     </form>
   );
-}
+};
 
-export default Register
+export default Register;

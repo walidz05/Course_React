@@ -9,15 +9,37 @@
 .btn-default{
 @include mixins.button(variables.$main1,variables.$main2,variables.$white,3.5rem,18px,.2rem,0,2rem)
 }     
+.btn-dark{
+@include mixins.button(variables.$blackDark, variables.$blackDark, variables.$white, 3.5rem, 18px, .2rem, 0, 2rem);
+}
 
 .pr{
 position: relative;
 }
 
 .group{
+      margin-bottom: 1.3rem;
 
       &__control{
-            
+            display: block;
+            width: 100%;
+            border-radius:.4rem;
+            outline: none;
+            font-size:1.6rem;
+            border: 1Px solid variables.$silver;
+            height: 4rem;
+            padding:0 2rem;
       }
+}
+
+::placeholder{
+      color: variables.$blackDark;
+      font-size: 1.2rem;
+}
+
+.flex{
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 

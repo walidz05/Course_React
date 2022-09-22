@@ -17,16 +17,26 @@ const DestinationInfo = ({details}) => {
         <div className="row">
           <div className="col-8">
             <div className="destinationInfo__details">
-              <div className="row">
-                <DestinationInfo_details
-                  language={details.language}
-                  languageText="language"
-                />
-                <DestinationInfo_details
-                  currencyText='currency'
-                  currency={details.currency}
-                />
-              </div>
+            
+                <div className="destinationInfo__details__head__language">
+                  <div className="row">
+                    <DestinationInfo_details
+                      language={details.language}
+                      languageText="Language"
+                    />
+                  </div>
+                </div>
+
+
+                <div className="destinationInfo__details__head__currency">
+                  <div className="row">
+                    <DestinationInfo_details
+                      currencyText="Currency"
+                      currency={details.currency}
+                    />
+                  </div>
+                </div>
+             
             </div>
           </div>
         </div>

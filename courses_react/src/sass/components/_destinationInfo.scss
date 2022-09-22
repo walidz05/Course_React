@@ -4,8 +4,28 @@
       margin:10rem 0;
 
       &__p{
-      font-size: 1.2rem;
+            font-size: 1.2rem;
             color: variables.$grayP;
             line-height: 2.5;
+            margin-bottom: 1rem;
+      }
+      
+
+      &__details{
+
+            &__head__language{
+                  border-bottom: 1px dotted variables.$bdr_gray;  
+                  padding: 1rem 0;
+                  color: variables.$grayP;
+                  font-size: 1.2rem;
+            }
+
+              &__head__currency{
+                border-bottom: 1px dotted variables.$bdr_gray;  
+                  padding: 1rem 0;
+                  color: variables.$grayP;
+                  font-size: 1.2rem;
+            }
+            
       }
 }

@@ -6,8 +6,20 @@ const DestinationReducer = (state, action) => {
 
     return{
       ...state,details:destination
-    }
+  }
 
+  }
+
+  else if (action.type === "GET_CITIZES_CONTRY") {
+
+      const city = state.Cities.filter(
+        (item) => item.destinationId == parseInt(action.payload)
+      );
+
+      return {
+        ...state,
+        city,
+      };
   }
   return state;
 };

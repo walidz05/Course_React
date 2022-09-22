@@ -3,15 +3,15 @@ import {useParams} from 'react-router-dom';
 import DistinationContext from "../context/DistinationContext";
 import Header from '../components/Header';
 import DestinationInfo from '../components/DestinationInfo';
+import Cities from '../components/Cities';
 
 
 const DetailsDestination = () => {
 
 const {
-  state: { details },
+  state: { details, city },
   dispatch,
 } = useContext(DistinationContext);
-
 
   const [state, setState] = useState({
     video: "",
@@ -28,12 +28,15 @@ const {
       dispatch({type:'GET_DETAILS_DATA',payload:id})
       state.heading = details.name;
       state.img = details.bigImage;
+      dispatch({type:'GET_CITIZES_CONTRY',payload:id})
+      console.log("city",city);
  }, [id,details]);
 
   return (
     <>
       <Header state={state}/>
-     <DestinationInfo details={details}/>
+      <DestinationInfo details={details}/>
+      <Cities city={city}/>
     </>
   );
 }

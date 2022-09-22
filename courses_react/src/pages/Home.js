@@ -4,6 +4,7 @@ import Modal from '../components/Modal';
 import ModelContext from "../context/ModelContext";
 import Register from '../auth/Register';
 import Login from '../auth/Login';
+import Distination from '../components/Distination';
 
 const Home = () => {
 
@@ -39,6 +40,8 @@ const Home = () => {
       <Modal current={loginModel}>
         <Login currentModel={registerModel} />
       </Modal>
+
+      <Distination/>
     </>
   );
 }

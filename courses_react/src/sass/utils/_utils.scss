@@ -2,7 +2,7 @@
 @use '../abstract/mixins';
 
 .container {
-      max-width: 1200px;
+      max-width: 1500px;
       margin: 0 auto;
 }
 
@@ -11,6 +11,9 @@
 }     
 .btn-dark{
 @include mixins.button(variables.$blackDark, variables.$blackDark, variables.$white, 3.5rem, 18px, .2rem, 0, 2rem);
+}
+.btn-white{
+      @include mixins.button(variables.$white, variables.$white, variables.$black, 3.5rem, 18px, .2rem, 0, 2rem);
 }
 
 .pr{
@@ -41,5 +44,31 @@ position: relative;
 display: flex;
 justify-content: space-between;
 align-items: center;
+}
+
+.p-15{
+      padding: 15px;
+}
+
+.mr-minus-15{
+      margin-right: -15px;
+}
+
+
+.ml-minus-15 {
+      margin-left: -15px;
+}
+
+.heading{
+      margin-bottom: 4rem;
+      font-size:1.5rem;
+      font-weight:400;
+      color:variables.$main1;
+      transform: rotate(-5deg);
+      display: inline-block;
+}
+
+.text-right{
+text-align: right;
 }
 

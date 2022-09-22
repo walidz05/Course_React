@@ -10,10 +10,12 @@
 
 @mixin  align($flex,$justify-content,$align-items,$height){
       display: $flex;
-      justify-content: $justify-content;
       align-items: $align-items;
+      justify-content: $justify-content;
       height: $height;
 }
+
+
 
 @mixin  button($color1,$color2,$textColor,$height,$fontSize,$bdr,$paddingVertical,$paddingHorizontal){
       background: linear-gradient(to right, $color1, $color2);

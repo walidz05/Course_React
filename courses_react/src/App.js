@@ -8,6 +8,8 @@ import ModelProvider from './context/providers/ModelProvider';
 import Navbar from './components/Navbar';
 import NavProvider from './context/providers/NavProvider';
 import Toggle from './components/Toggle';
+import DestinationProvider from './context/providers/DestinationProvider';
+import DetailsDestination from './pages/DetailsDestination';
 
 function App() {
 
@@ -15,13 +17,16 @@ function App() {
     <BrowserRouter>
       <ModelProvider>
         <NavProvider>
-          <Toggle />
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <DestinationProvider>
+            <Toggle />
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/details/:id" element={<DetailsDestination />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </DestinationProvider>
         </NavProvider>
       </ModelProvider>
     </BrowserRouter>

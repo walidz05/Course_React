@@ -6,6 +6,7 @@ import Register from '../auth/Register';
 import Login from '../auth/Login';
 import Distination from '../components/Distination';
 import Services from '../components/services/Services';
+import Reviews from '../components/reviews/Reviews';
 
 const Home = () => {
 
@@ -43,6 +44,7 @@ const Home = () => {
       </Modal>
       <Distination/>
       <Services/>
+      <Reviews/>
     </>
   );
 }

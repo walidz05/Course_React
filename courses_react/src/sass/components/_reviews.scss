@@ -1,0 +1,12 @@
+@use '../abstract/mixins';
+.reviews {
+      margin-top: 8rem;
+      &__body {
+            &__contents{
+                  @include mixins.align(flex, null, null, null);
+                  &__info {
+                      
+                  }
+            }   
+      }
+}

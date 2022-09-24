@@ -5,6 +5,7 @@ import ModelContext from "../context/ModelContext";
 import Register from '../auth/Register';
 import Login from '../auth/Login';
 import Distination from '../components/Distination';
+import Services from '../components/services/Services';
 
 const Home = () => {
 
@@ -40,8 +41,8 @@ const Home = () => {
       <Modal current={loginModel}>
         <Login currentModel={registerModel} />
       </Modal>
-
       <Distination/>
+      <Services/>
     </>
   );
 }

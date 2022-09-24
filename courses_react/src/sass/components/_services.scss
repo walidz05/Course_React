@@ -1,0 +1,71 @@
+@use '../abstract/variables';
+
+.services{
+margin: .8rem 0;
+background: variables.$bgGray;
+padding: 13rem 0;
+transform: skewY(-5deg);
+
+&__contents{
+      transform: skewY(5deg);
+}
+
+&__left{
+      margin-right: 10rem;
+      &__heading{
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 4rem;
+            background: linear-gradient(35deg,variables.$black 40%,variables.$main1 40%);
+            color: transparent;
+            background-clip: text;
+            text-transform: capitalize;
+      }
+      &__paragraph{
+            margin-top: 3.6rem;
+            font-size: 1.6rem;
+            line-height: 2.5rem;
+      }
+}
+
+&__list{
+
+      margin-bottom: .5rem;
+
+      &__heading{
+            background: variables.$white;
+            padding:1.5rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+      }
+
+      &__details{
+            max-height: 0;
+            overflow: hidden;
+            font-size: 1.2rem;
+            padding-left:3.5rem;
+            padding-right: 3.5rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            line-height: 2.3rem;
+            transform: translateY(-10px);
+            opacity: 0;
+      }
+
+}
+
+}
+
+.show{
+      max-height: max-content;
+      overflow: visible;
+      transform: translateY(0);
+      opacity: 1;
+      transition: all 1s
+}
+.red {
+color: red !important
+}

@@ -1,6 +1,5 @@
 import React from 'react'
-import ListCites from "../components/ListCites";
-
+import ListCites from "./ListCites";
 const Cities = ({city}) => {
       
   return (
@@ -10,7 +9,7 @@ const Cities = ({city}) => {
           <div className="cities__container">
             <div className="row">
               {city.map((item) => (
-                <ListCites city={item} />
+                <ListCites city={item} key={item.id} />
               ))}
             </div>
           </div>

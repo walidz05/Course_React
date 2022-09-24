@@ -3,7 +3,7 @@ import {useParams} from 'react-router-dom';
 import DistinationContext from "../context/DistinationContext";
 import Header from '../components/Header';
 import DestinationInfo from '../components/DestinationInfo';
-import Cities from '../components/Cities';
+import Cities from '../components/cities/Cities';
 
 
 const DetailsDestination = () => {
